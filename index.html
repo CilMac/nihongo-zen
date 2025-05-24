@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nihongo - par CilMac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="zen_local.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background: url('fond_sakura_flou.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.82);
+            padding: 2rem;
+            border-radius: 16px;
+            max-width: 960px;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .language-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #eee;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        img.logo {
+            width: 100px;
+            margin: 0 auto 1rem;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        p.tagline {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 0.8rem;
+        }
+        a.menu-item {
+            display: block;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 0.9rem;
+            text-decoration: none;
+            color: #111;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+        }
+        a.menu-item:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+    <script>
+        function toggleLang() {
+            const fr = document.querySelectorAll('.fr');
+            const en = document.querySelectorAll('.en');
+            fr.forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+            en.forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+        }
+        window.onload = () => {
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+        };
+    </script>
+</head>
+<body>
+    <div class="language-toggle" onclick="toggleLang()">🇫🇷 | 🇬🇧</div>
+    <audio id="gong" src="cloche_japonaise.mp3" preload="auto"></audio>
+    <div class="container">
+        <img src="zen_local.png" alt="Logo Zen" class="logo" onclick="document.getElementById('gong').play();">
+        <h1 class="fr">Nihongo - par CilMac</h1>
+        <h1 class="en">Nihongo – by CilMac</h1>
+
+        <p class="tagline fr">千里の道も一歩から – Un voyage de mille lieues commence par un pas</p>
+        <p class="tagline en">千里の道も一歩から – A journey of a thousand miles begins with a single step</p>
+
+        <div class="menu">
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=instructions">A. ⚠️ INSTRUCTIONS</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=Pièges_japonais">B. 🪤 Pièges japonais</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=guideAssimilComplet">C. 👍 Guide de conversation</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=défi_du_jour">D. 🏔️ Défi du jour</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=QCM_100_courants">E. 🏃‍♂️ QCM - 100 mots</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=QCM_Assimil">F. QCM - Voc Assimil</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=QCM_Michelin">G. 🛞 QCM - Voc Michelin</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=QCM_Bouffe">H. 🍣 QCM - Bouffe</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=QCM_Démonstratifs">I. 🤔 QCM - Démonstratifs</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=Exercice_Démonstratifs">J. 🙄 Exercice - Démonstratifs</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=particules">K. 😬 Exercice - Particules</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=kanji">L. 😩 Quiz - Kanji</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=phraseHiragana">M. あ Lecture Hiragana</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=kanpai">N. 🍻 QCM - Kanpai</a>
+            <a class="menu-item" href="https://chat.openai.com/g/g-680e681abb148191b52ee9b704b3669f-nihongo-par-cilmac?prompt=temps">O. 🌤️ QCM - Temps</a>
+        </div>
+
+        <footer>
+            <p class="fr">Tapez “menu” dans le GPT à tout moment pour revenir ici.</p>
+            <p class="en">Type “menu” in the GPT at any time to return here.</p>
+            <p style="font-size: 0.95rem; color: #666; margin-top: 1.5rem;">
+                <span class="fr">⚠️ Pour utiliser l’assistant, vous devez être connecté à <a href="https://chat.openai.com" target="_blank">chat.openai.com</a><br>
+                (et avoir reçu un lien d’invitation au GPT personnalisé Nihongo – par CilMac).</span>
+                <span class="en">⚠️ To use the assistant, you must be logged in at <a href="https://chat.openai.com" target="_blank">chat.openai.com</a><br>
+                (and have received an invite link to the Nihongo – by CilMac GPT).</span>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
